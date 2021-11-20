@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  background: #142b3b;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.presentation-controller {
+  width: 1020px;
+  height: 530px;
+  position: relative;
+}
+
+.presentation-controller.full-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.presentation-controller.full-screen .slide-no {
+  bottom: 15px;
+  left: 15px;
+}
+
+.presentation-controller.full-screen .navigation {
+  bottom: 15px;
+  right: 15px;
+}
+
+.presentation-controller.full-screen .navigation .btn:hover {
+  background: #201e1e;
+  color: #FDFDFD;
+}
+
+.presentation-controller.full-screen .navigation .btn-screen:hover {
+  color: #201e1e;
+}
+
+.presentation-controller .presentation {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #FDFDFD;
+  position: relative;
+  -webkit-box-shadow: 0.5rem 0.5rem #e47c5d, -0.5rem -0.5rem #e42d40;
+          box-shadow: 0.5rem 0.5rem #e47c5d, -0.5rem -0.5rem #e42d40;
+  border-radius: 5px;
+}
+
+.presentation-controller .presentation .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FDFDFD;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  visibility: none;
+}
+
+.presentation-controller .presentation .slide.show {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+
+.presentation-controller .presentation .slide .heading {
+  padding: 2rem;
+  background: #5ebdb2;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.presentation-controller .presentation .slide .content {
+  padding: 2em;
+  width: 100%;
+  height: calc(100% - 100px);
+  z-index: 11;
+}
+
+.presentation-controller .presentation .slide .content.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.presentation-controller .presentation .slide .content.center {
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.presentation-controller .presentation .slide .content p {
+  font-size: 1.75em;
+}
+
+.presentation-controller .presentation .slide .content p.title {
+  font-size: 3em;
+  color: #5ebdb2;
+  font-weight: bold;
+}
+
+.presentation-controller .presentation .slide .content p.sub-title {
+  font-size: 2.5rem;
+  color: #5ebdb2;
+}
+
+.presentation-controller .presentation .slide .content ul {
+  margin-left: 2rem;
+}
+
+.presentation-controller .presentation .slide .content ul li {
+  font-size: 1.2em;
+}
+
+.presentation-controller .presentation .slide .content a {
+  font-size: 1.2em;
+}
+
+.presentation-controller .presentation .slide .content * {
+  font-size: 1.5em;
+  margin-bottom: 1.2rem;
+}
+
+.presentation-controller .slide-no {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  color: #b6b6b6;
+}
+
+.presentation-controller .navigation {
+  position: absolute;
+  bottom: -45px;
+  right: 0;
+}
+
+.presentation-controller .navigation button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.presentation-controller .navigation .btn {
+  background: #464646;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.presentation-controller .navigation .btn.show {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+
+.presentation-controller .navigation .btn-screen {
+  background: transparent;
+  color: #b6b6b6;
+  opacity: 0;
+  -webkit-transform: sacale(0);
+          transform: sacale(0);
+  visibility: hidden;
+}
+
+.presentation-controller .navigation .btn-screen.show {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+}
+
+.presentation-controller .navigation .btn-screen.hover {
+  color: #ffffff;
+  box-shoadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=style.css.map */
